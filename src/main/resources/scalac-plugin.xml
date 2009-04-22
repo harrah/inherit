@@ -1,0 +1,4 @@
+<plugin>
+	<name>inherit</name>
+	<classname>inherit.InheritPlugin</classname>
+</plugin>

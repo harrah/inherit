@@ -1,0 +1,8 @@
+A basic compiler plugin to write out the inheritance graph for a code base.
+
+To build with sbt (http://code.google.com/p/simple-build-tool/wiki/Setup):
+
+$ sbt
+> package
+
+This produces a compiler plugin in target/.
