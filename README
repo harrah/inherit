@@ -1,8 +1,14 @@
 A basic compiler plugin to write out the inheritance graph for a code base.
 
-To build with sbt (http://code.google.com/p/simple-build-tool/wiki/Setup):
+To build with sbt (Requires loader 0.5 or higher to cross-build.  See http://code.google.com/p/simple-build-tool/wiki/Setup for sbt setup):
 
-$ sbt
-> package
+$ sbt "+update" "+package"
 
-This produces a compiler plugin in target/.
+This produces a compiler plugin in target/scala_<scala-version>.  Choose the one for the version of Scala you are using.
+
+Alternatively, if you would like to use the plugin in a project you are building with sbt, make your project definition extend AutoCompilerPlugins and add inherit as a dependency:
+
+class YourProject(info: ProjectInfo) extends DefaultProject(info) with AutoCompilerPlugins
+{
+  val inherit = compilerPlugin("inherit" %% "inherit" % "0.2")
+}
