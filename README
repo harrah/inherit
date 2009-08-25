@@ -1,8 +1,10 @@
-A basic compiler plugin to write out the inheritance graph for a code base.
+A basic compiler plugin to write out the inheritance graph for a code base.  It produces a graphviz file inherit.dot.  Process it with something like:
+
+  dot -Tpng -Grankdir=BT -o inherit.png inherit.dot
 
 To build with sbt (Requires loader 0.5 or higher to cross-build.  See http://code.google.com/p/simple-build-tool/wiki/Setup for sbt setup):
 
-$ sbt "+update" "+package"
+  $ sbt "+update" "+publish-local"
 
 This produces a compiler plugin in target/scala_<scala-version>.  Choose the one for the version of Scala you are using.
 
@@ -10,5 +12,5 @@ Alternatively, if you would like to use the plugin in a project you are building
 
 class YourProject(info: ProjectInfo) extends DefaultProject(info) with AutoCompilerPlugins
 {
-  val inherit = compilerPlugin("inherit" %% "inherit" % "0.2")
+  val inherit = compilerPlugin("inherit" %% "inherit" % "0.1")
 }
