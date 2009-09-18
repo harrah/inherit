@@ -6,7 +6,6 @@ package inherit
 import scala.tools.nsc.{plugins, Global, Phase}
 import plugins.{Plugin, PluginComponent}
 
-import scala.collection.jcl.{TreeMap, TreeSet}
 import scala.collection.mutable.HashMap
 import java.io.{BufferedWriter, File, FileWriter, PrintWriter, Writer}
 
