@@ -2,7 +2,7 @@ A basic compiler plugin to write out the inheritance graph for a code base.  It 
 
   dot -Tpng -Grankdir=BT -o inherit.png inherit.dot
 
-To build with sbt (Requires loader 0.5 or higher to cross-build.  See http://code.google.com/p/simple-build-tool/wiki/Setup for sbt setup):
+Build using sbt 0.6.12:
 
   $ sbt "+update" "+publish-local"
 
