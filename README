@@ -12,5 +12,5 @@ Alternatively, if you would like to use the plugin in a project you are building
 
 class YourProject(info: ProjectInfo) extends DefaultProject(info) with AutoCompilerPlugins
 {
-  val inherit = compilerPlugin("inherit" %% "inherit" % "0.1")
+  val inherit = compilerPlugin("inherit" %% "inherit" % "0.1.2")
 }
