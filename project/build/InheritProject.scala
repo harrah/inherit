@@ -1,7 +1,6 @@
 import sbt._
 
-class InheritProject(info: ProjectInfo) extends DefaultProject(info) with AutoCompilerPlugins
+class InheritProject(info: ProjectInfo) extends DefaultProject(info)
 {
-	val repo = ScalaToolsSnapshots
-	override def crossScalaVersions = Set("2.7.2", "2.7.3", "2.7.4", "2.7.5", "2.8.0-SNAPSHOT")
+	override def managedStyle = ManagedStyle.Maven
 }
